@@ -1,6 +1,8 @@
 # cv
 
-Source for my LaTeX CV. The latest HTML version built from this repository is available [here](https://cv.zhaochi.ru).
+Source for my LaTeX CV. The latest HTML version built from this repository is available:
+- English version: [cv.zhaochi.ru](https://cv.zhaochi.ru)
+- Chinese version: [cv.zhaochi.ru/cn](https://cv.zhaochi.ru/cn)
 
 ## Pre-commit Hooks
 

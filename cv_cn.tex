@@ -1,0 +1,316 @@
+% vim: set filetype=tex :
+% !TEX program = xelatex
+%-------------------------
+% Resume in Latex
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[UTF8,10pt]{ctexart}
+
+\usepackage{latexsym}
+\usepackage{fontawesome5}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage[super]{nth}
+\usepackage{booktabs}
+\usepackage{accsupp}
+\usepackage{xifthen}
+
+%----------FONT OPTIONS----------
+% Set Chinese fonts for macOS
+% Using system Chinese fonts available on macOS
+\setCJKmainfont{STSong}[BoldFont=STHeiti,ItalicFont=STKaiti]
+% Alternative fonts if above don't work:
+% \setCJKmainfont{Songti SC}[BoldFont=Heiti SC,ItalicFont=Kaiti SC]
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\fancyhead{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+% defines one's email
+% usage: \email{<email>}
+\newcommand{\email}[1]{\faEnvelope\ \href{mailto:#1}{#1}}
+% defines one's phone
+% usage: \phone{<phone>}
+\newcommand{\phone}[1]{\faPhone\ {#1}}
+% defines one's linkedin
+% usage: \linkedin{<linkedin>}
+\newcommand{\linkedin}[1]{\href{#1}{\faLinkedin}}
+% defines one's GitHub
+% usage: \github{<github>}
+\newcommand{\github}[1]{\href{#1}{\faGithub}}
+
+% defines one's homepage
+% usage: \homepage{<homepage>}
+\newcommand{\homepage}[2][]{\faLink\ 
+  \ifthenelse{\isempty{#1}}%
+    {\href{#2}{#2}}
+    {\href{#2}{#1}}}
+\newcommand{\researchgate}[1]{\href{#1}{\faResearchgate}}
+\newcommand{\orcid}[1]{\href{#1}{\faOrcid}}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+% \pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\link}[2]{\href{#1}{\color{blue}\underline{#2}}}
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{\small#1} & \textit{\small #2} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & #2 \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newenvironment{resumeSubHeadingList}{\begin{itemize}[leftmargin=0.15in, label={}]}{\end{itemize}}
+\newenvironment{resumeItemList}{\begin{itemize}}{\end{itemize}}
+\newenvironment{resumeItemSubList}{\begin{itemize}\setlength\itemsep{0.4em}}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\awardsTable}[1]{
+	\begin{tabularx}{\textwidth}{llllll}
+	\emph{奖项名称}	& \emph{获奖等级}	& \emph{级别}	& \emph{颁发单位} & \emph{年份}       \\
+	\midrule\midrule
+	#1
+	\end{tabularx}
+}
+\newcommand{\awardsTableRow}[6]{
+	\BeginAccSupp{method=plain, ActualText=11\string\t 21}#1 & #2 & #3 & #4 & #5\EndAccSupp{} \\
+}
+
+\fancyfoot[L]{
+  \small \LaTeX\ 源码: \link{https://github.com/vectorsss/cv}{github.com/vectorsss/cv} $|$ 
+  网页版: \link{https://cv.zhaochi.ru/cn}{cv.zhaochi.ru/cn}
+}
+
+\renewcommand\footrule{\hrule width\textwidth}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\begin{center}
+  \begin{flushright}
+    \footnotesize{\it 编译日期：\today{}}
+  \end{flushright}
+\end{center}
+\begin{center}
+  \textbf{\huge \scshape 赵驰} \\ \vspace{1pt}
+  \small \email{vector.zhaochi@gmail.com} $|$ \homepage[https://chizhao.gitlab.io]{https://chizhao.gitlab.io} $|$ \linkedin{https://www.linkedin.com/in/dandanv5} $|$ \github{https://github.com/vectorsss} $|$
+  \researchgate{https://www.researchgate.net/profile/Chi-Zhao-4} $|$ \orcid{https://orcid.org/0000-0002-1166-7578}
+\end{center}
+
+\section{教育经历}
+\begin{resumeSubHeadingList}
+  \resumeSubheading
+    {圣彼得堡国立大学}{2021.09 -- 2025.04}
+    {应用数学与控制过程博士}{俄罗斯，圣彼得堡}
+
+  \resumeSubheading
+    {圣彼得堡国立大学}{2019.09 -- 2021.06}
+    {应用数学与信息学硕士（GPA：4.9/5.0）}{俄罗斯，圣彼得堡}
+  \resumeSubheading
+    {北京理工大学}{2017.07.03 -- 2017.07.28}
+    {ACM夏令营}{中国，北京}
+
+  \resumeSubheading
+    {延安大学}{2015.09 -- 2019.06}
+    {计算机科学学士（GPA：3.1/4.0）}{中国，延安}
+\end{resumeSubHeadingList}
+
+\section{工作经历}
+\begin{resumeSubHeadingList}
+
+  \resumeSubheading
+    {华为公司}{2021.09 -- 至今}
+    {研究员}{俄罗斯，圣彼得堡}
+    \vspace{2pt}
+  \resumeSubheading
+    {江苏金智教育股份有限公司}{2016.09 -- 2019.05}
+    {软件工程师}{中国，延安}
+
+\end{resumeSubHeadingList}
+\section{项目经历}
+\begin{resumeSubHeadingList}
+  \resumeSubheading
+    {俄罗斯科学基金会资助项目 \link{https://rscf.ru/en/project/22-21-00346/}{编号：22-21-00346}}{2023年}
+       {研究员}{俄罗斯，圣彼得堡} \resumeSubheading {大规模高维向量相似度快速计算}{2018年5月 -- 2018年8月} {算法工程师}{中国，延安}
+
+    \vspace{3pt}{\fontsize{8.5}{10}\selectfont 该项目提高了最近邻算法的效率，并获得了2018年中国软件杯三等奖。}
+  \resumeSubheading
+    {基于CNN的在线新闻分类系统}{2018年3月 -- 2018年5月}
+    {全栈工程师}{中国，延安}
+
+    \vspace{3pt}{\fontsize{8.5}{10}\selectfont 该项目获得了中国软件著作权登记证书，并获得了2018年计算机设计大赛三等奖。}
+\end{resumeSubHeadingList}
+
+%-----------PROJECTS-----------
+\section{专利/著作权证书}
+\begin{resumeSubHeadingList}
+  \resumeSubheading
+    {双层网络中意见动态建模程序}{2023年}
+    {俄罗斯计算机软件著作权登记证书}{{\link{https://new.fips.ru/registers-doc-view/fips_servlet?DB=EVM&DocNumber=2023661532&TypeFile=html}{编号：2023661532}}}
+
+  \resumeSubheading
+    {基于卷积神经网络的在线新闻分类系统}{2018年}
+    {中国计算机软件著作权登记证书}{编号：2018SR502097}
+\end{resumeSubHeadingList}
+
+\section{开源项目}
+\begin{resumeSubHeadingList}
+
+  \resumeProjectHeading{
+    \link{https://github.com/vectorsss/shapG}{\textbf{ShapG}} $|$
+    \emph{python $\cdot$ 特征重要性算法 $\cdot$ 中心性度量}}{}
+  \begin{resumeItemList}
+    \resumeItem{基于Shapley值的特征重要性算法Python包。}
+    \resumeItem{该包还可用于计算图中的中心性。}
+  \end{resumeItemList}
+
+  \resumeProjectHeading{
+    \link{https://github.com/vectorsss/news_classification}{\textbf{新闻分类}} $|$
+    \emph{python $\cdot$ 自然语言处理 $\cdot$ CNN $\cdot$ 文本分类}}{}
+  \begin{resumeItemList}
+    \resumeItem{基于卷积神经网络的在线新闻分类系统。}
+    \resumeItem{该项目在2018年全国计算机设计大赛中获得省级三等奖。}
+  \end{resumeItemList}
+\end{resumeSubHeadingList}
+
+\section{技能}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+        \textbf{编程语言}{：Python $\cdot$ C/C++ $\cdot$ Go $\cdot$ Matlab/Octave $\cdot$ Julia $\cdot$ R $\cdot$ SQL $\cdot$ \LaTeX} \\
+        \textbf{机器学习库}{：Tensorflow $\cdot$  PyTorch $\cdot$ Keras $\cdot$  Scikit-Learn} \\
+        \textbf{开发工具}{：Git $\cdot$ Docker $\cdot$  谷歌云平台} \\
+        \textbf{操作系统}{：Windows $\cdot$ MacOS $\cdot$ Arch Linux} \\
+        \textbf{语言能力}{：中文（母语），英语（流利）}
+        }}
+\end{itemize}
+
+\section{研究兴趣}
+\begin{resumeSubHeadingList}
+  \resumeProjectHeading{
+    图算法 $\cdot$ 中心性度量 $\cdot$ 机器学习
+    $\cdot$ 可解释人工智能 $\cdot$ 概率论
+    $\cdot$ 统计学}{}
+  \resumeProjectHeading{
+    数据压缩 $\cdot$ 编码理论 $\cdot$ 时间序列分析 $\cdot$
+    优化 $\cdot$ 随机建模 $\cdot$ 随机过程}{}
+\end{resumeSubHeadingList}
+
+\section{精选论文}
+\begin{enumerate}
+  \fontsize{10}{10.5}\selectfont
+  \item [1.] \textbf{Zhao C.}, Liu J., Parilina E. M. ShapG: new feature importance method based on the Shapley value // {\it Engineering Applications of Artificial Intelligence.} -- 2025. -- May. -- Vol. 148, 110409.
+  \item [2.] \textbf{Zhao C.}, Parilina E. M. Centrality measures and opinion dynamics in two-layer networks with replica nodes // {\it arXiv preprint arXiv:2406.18780v2.} -- 2024. -- 2406.18780v2.
+  \item [3.] \textbf{Zhao C.}, Parilina E. M. Analysis of consensus time and winning rate in two-layer networks with hypocrisy of different structures // {\it Vestnik of Saint Petersburg University. Applied Mathematics. Computer Science. Control Processes.} -- 2024. -- Vol. 20, no. 2. -- P. 170-192.
+  \item [4.] \textbf{Zhao C.}, Parilina E. M. Opinion Dynamics in Two-Layer Networks with Hypocrisy // {\it Journal of the Operations Research Society of China}. -- 2024. -- Mar. -- Vol. 12, no. 1. -- P. 109-132.
+  \item [5.] \textbf{Zhao C.}, Parilina E. M. Network Structure Properties and Opinion Dynamics in Two-Layer Networks with Hypocrisy // {\it Mathematical Optimization Theory and Operations Research}. -- Cham : Springer Nature Switzerland. -- 2024. -- P. 300-314.
+  \item [6.] \textbf{Zhao C.}, Parilina E. M. Consensus time and winning rate based on simulations in two-layer networks with hypocrisy // {\it 2023 7th Scientific School Dynamics of Complex Networks and their Applications (DCNA).} -- 2023. -- P. 68-71.
+\end{enumerate}
+
+\section{学术服务}
+\begin{resumeSubHeadingList}
+  \resumeProjectHeading{{\bf 期刊和会议审稿人}}{}
+  \begin{resumeItemList}
+    \resumeItem{Engineering Applications of Artificial Intelligence (EAAI)}
+    \resumeItem{International Conference On Computational Optimization (ICOMP)}
+  \end{resumeItemList}
+\end{resumeSubHeadingList}
+\section{会议经历}
+\begin{resumeSubHeadingList}
+  \resumeSubheading{International Conference On Computational Optimization
+                    (ICOMP 2024)}{Innopolis, Russia}{Visitor}{Oct. 10 - Oct.
+                    12, 2024}
+  \resumeSubheading{Mathematical Optimization Theory and Operations Research
+                    (MOTOR 2024)}{Omsk, Russia}{Oral Presentation}{June. 30 -
+                    July. 06, 2024}
+  \resumeSubheading{Game Theory and Management (GTM 2024)}{Saint-Petersburg,
+                    Russia}{Oral Presentation}{June. 26 - 28, 2024}
+  \resumeSubheading{Dynamics of Complex Networks and their Applications (DCNA
+                    2023)}{Kaliningrad, Russia}{Poster Presentation}{Sep. 18 -
+                    20, 2023}
+  \resumeSubheading{Game Theory and Management (GTM 2023)}{Saint-Petersburg,
+                    Russia}{Oral Presentation}{June. 28 - 30, 2023}
+  \resumeSubheading{Control Processes and Stability 2022}{Saint-Petersburg,
+                    Russia}{Oral Presentation}{Apr. 4 - 8, 2022}
+  \resumeSubheading{Control Processes and Stability 2021}{Saint-Petersburg,
+                    Russia}{Oral Presentation}{Apr. 5 - 9, 2021}
+  \resumeSubheading{2017云栖大会}{中国，杭州}{参会}{2017年10月11日 - 14日}
+  \resumeSubheading{易班开发者大会 2017}{中国，上海}{开发者}{2017年8月}
+  \resumeSubheading{语言与智能峰会 2017}{中国，北京}{参会}{2017年7月23日}
+\end{resumeSubHeadingList}
+\section{教学经历}
+\begin{resumeSubHeadingList}
+  \resumeSubheading{R语言应用统计}{俄罗斯，圣彼得堡}{助教}{2024年}
+  \resumeSubheading{统计决策与计量经济学}{俄罗斯，圣彼得堡}{助教}{2022年}
+\end{resumeSubHeadingList}
+
+\section{荣誉与奖项}
+\setlength{\tabcolsep}{6.0pt}
+\renewcommand{\arraystretch}{1.1}
+\fontsize{8.5}{11}\selectfont
+\awardsTable{
+  \awardsTableRow{优秀毕业证书}{-}{学校}{圣彼得堡国立大学}{2021年6月} \\
+  \awardsTableRow{优秀毕业论文（设计）}{-}{学校}{延安大学}{2019年6月} \\
+  \awardsTableRow{优秀毕业生}{-}{学校}{延安大学}{2019年6月} \\
+  \awardsTableRow{优秀学生奖学金}{-}{学校}{延安大学}{2018年12月} \\
+  \awardsTableRow{中国软件杯大赛}{三等奖}{全国}{中国软件杯组委会}{2018年10月} \\
+  \awardsTableRow{计算机设计大赛}{三等奖}{西北赛区}{西北大学（中国）}{2018年5月} \\
+  \awardsTableRow{数学建模竞赛}{二等奖}{陕西省}{中国工业与应用数学学会}{2017年12月} \\
+  \awardsTableRow{数学竞赛}{三等奖}{陕西省}{中国数学会}{2016年11月} \\ \hline }
+
+\end{document}
