@@ -1,8 +1,8 @@
 .DS_Store
 build
-cv.aux
-cv.fdb_latexmk
-cv.fls
-cv.log
-cv.out
-cv.synctex.gz
+cv*.aux
+cv*.fdb_latexmk
+cv*.fls
+cv*.log
+cv*.out
+cv*.synctex*
