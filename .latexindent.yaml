@@ -408,7 +408,7 @@ modifyLineBreaks:
           |
           \\item(?:\h|\[)
           |
-          \\(?:link|emph)\h*\{
+          \\emph\h*\{
           |
           \\(?:resumeItem|resumeSubheading|resumeProjectHeading|awardsTableRow)\h*\{
     blocksBeginWith:
