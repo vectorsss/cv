@@ -6,7 +6,7 @@
 % License : MIT
 %------------------------
 
-\documentclass[UTF8,10pt]{ctexart}
+\documentclass[letterpaper,10pt]{ctexart}
 
 \usepackage{latexsym}
 \usepackage{fontawesome5}
@@ -30,6 +30,7 @@
 \setCJKmainfont{STSong}[BoldFont=STHeiti,ItalicFont=STKaiti]
 % Alternative fonts if above don't work:
 % \setCJKmainfont{Songti SC}[BoldFont=Heiti SC,ItalicFont=Kaiti SC]
+\linespread{1.0}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -164,6 +165,7 @@
   \resumeSubheading
     {圣彼得堡国立大学}{2019.09 -- 2021.06}
     {应用数学与信息学硕士（GPA：4.9/5.0）}{俄罗斯，圣彼得堡}
+
   \resumeSubheading
     {北京理工大学}{2017.07.03 -- 2017.07.28}
     {ACM夏令营}{中国，北京}
@@ -178,8 +180,7 @@
 
   \resumeSubheading
     {华为公司}{2021.09 -- 至今}
-    {研究员}{俄罗斯，圣彼得堡}
-    \vspace{2pt}
+    {研发工程师}{俄罗斯，圣彼得堡}
   \resumeSubheading
     {江苏金智教育股份有限公司}{2016.09 -- 2019.05}
     {软件工程师}{中国，延安}
@@ -190,32 +191,36 @@
   \resumeSubheading
     {*专业模型数据治理/高价值训练数据选择（进行中）}{2025年}
     {项目负责人}{俄罗斯，圣彼得堡}
-    \resumeSubSubheading{该项目专注于通过数据治理和有价值的特征/训练数据选择来提高模型性能。}{}
-    \resumeSubSubheading{我们通过自研抽样算法，从原始的18亿条无线数据中抽取了6000万条最具代表性的数据。}{}
-    \resumeSubSubheading{最终，我们成功地将模型的精度提高了22\%，并去除了20\%的冗余特征，模型训练提速约10\%.}{}
+    \resumeSubSubheading{该项目专注于通过数据治理和有价值的特征/训练数据选择来提高模型精度。}{}
+    \resumeSubSubheading{通过自研多样性采样算法从18亿条无线网络数据(4G和5G)中抽取了6000万条最具代表性的数据。}{}
+    \resumeSubSubheading{通过自研采样和异常检测算法将模型精度提高了22\%。}{}
+    \resumeSubSubheading{通过自研特征重要性算法去除了20\%的冗余特征，使训练速度提升10\%。}{}
   \resumeSubheading
     {*内部列存储算法}{2023--2024年}
-    {研究员}{俄罗斯，圣彼得堡}
+    {研发工程师}{俄罗斯，圣彼得堡}
     \resumeSubSubheading{高性能、高度灵活的列存储无损压缩算法}{}
     \resumeSubSubheading{该算法将被商业化用于存储基站数据。}{}
     \resumeSubSubheading{LTE (4G) 数据 30\% 压缩率，NR (5G) 数据 40\% 压缩率，无任何性能损失。}{}
   \resumeSubheading
     {俄罗斯科学基金会资助项目 \link{https://rscf.ru/en/project/22-21-00346/}{编号：22-21-00346}}{2023年}
-    {研究员}{俄罗斯，圣彼得堡} \resumeSubheading {*内部分布式文件存储系统弹性扩展算法}{2023年}
     {研究员}{俄罗斯，圣彼得堡}
+    \resumeSubSubheading{完成了双层意见动态模型仿真，聚焦于公开意见和私密意见(EPO观点动态模型)。}{}
+  \resumeSubheading
+    {*内部分布式文件存储系统弹性扩展算法}{2023年}
+    {研发工程师}{俄罗斯，圣彼得堡}
     \resumeSubSubheading{使用HRW哈希实现HOFS多节点无缝扩展，最小化数据移动且无性能损失。}{}
     \resumeSubSubheading{可靠性显著提升：彻底解决``因哈希环丢失而无法重新生成导致群集数据全部丢失''场景下数据访问的可靠性问题}{}
-  \resumeSubheading {*数据包/路由数据压缩}{2023年} {研究员}{俄罗斯，圣彼得堡}
+  \resumeSubheading
+    {*数据包/路由数据压缩}{2023年}
+    {研发工程师}{俄罗斯，圣彼得堡}
     \resumeSubSubheading{该项目通过无损压缩达到85\% 压缩率（节省7倍磁盘使用量）。}{}
-
-    \newpage
   \resumeSubheading
     {*无线数据压缩}{2021--2022年}
-    {研究员}{俄罗斯，圣彼得堡}
+    {研发工程师}{俄罗斯，圣彼得堡}
     \resumeSubSubheading{该项目通过有损压缩达到96\% 压缩率。}{}
   \resumeSubheading
     {* SparkSQL查询优化}{2021年}
-    {研究员}{俄罗斯，圣彼得堡}
+    {研发工程师}{俄罗斯，圣彼得堡}
     \resumeSubSubheading{该项目通过谓词下推和数据结构优化将查询执行速度提升50\%。}{}
     % \resumeSubheading {大规模高维向量相似度快速计算}{2018年5月 -- 2018年8月} {算法工程师}{中国，延安}
     % \resumeSubSubheading{该项目提高了最近邻算法的效率，并获得了2018年中国软件杯三等奖。}{}
@@ -225,6 +230,7 @@
     % \resumeSubSubheading{该项目获得了2018年计算机设计大赛三等奖。}{}
 \end{resumeSubHeadingList}
 
+\newpage
 %-----------PROJECTS-----------
 \section{专利/著作权证书}
 \begin{resumeSubHeadingList}
@@ -311,6 +317,7 @@
                     07 - 11, 2025}
   \resumeSubheading{Game Theory and Management (GTM 2025)}{Saint-Petersburg,
                     Russia}{Oral Presentation}{July. 2 - 4, 2025}
+  \resumeSubheading{\nth{14} International Society of Dynamic Games (ISDG) Workshop}{Yerevan, Armenia}{Oral Presentation}{June. 11 - 13, 2025}
   \resumeSubheading{International Conference On Computational Optimization
                     (ICOMP 2024)}{Innopolis, Russia}{Visitor}{Oct. 10 - Oct.
                     12, 2024}
@@ -328,11 +335,12 @@
                     Russia}{Oral Presentation}{Apr. 4 - 8, 2022}
   \resumeSubheading{Control Processes and Stability 2021}{Saint-Petersburg,
                     Russia}{Oral Presentation}{Apr. 5 - 9, 2021}
-    % \resumeSubheading{The Computing Conference 2017}{Hangzhou,
-    % China}{Visitor}{Oct. 11 - 14, 2017} \resumeSubheading{Yiban Developer
-    % Conference 2017}{Shanghai, China}{Developer}{Aug. 2017}
-    % \resumeSubheading{Language \& Intelligence Summit 2017}{Beijing,
-    % China}{Visitor}{July 23, 2017}
+  \resumeSubheading{The Computing Conference 2017}{Hangzhou,
+                    China}{Visitor}{Oct. 11 - 14, 2017}
+  \resumeSubheading{Yiban Developer Conference 2017}{Shanghai,
+                    China}{Developer}{Aug. 2017}
+  \resumeSubheading{Language \& Intelligence Summit 2017}{Beijing,
+                    China}{Visitor}{July 23, 2017}
 \end{resumeSubHeadingList}
 
 \section{荣誉与奖项}
