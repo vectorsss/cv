@@ -45,5 +45,8 @@
     "-synctex=1",
     "-interaction=nonstopmode",
     "-file-line-error"
-  ]
+  ],
+  "python-envs.defaultEnvManager": "ms-python.python:conda",
+  "python-envs.defaultPackageManager": "ms-python.python:conda",
+  "python-envs.pythonProjects": []
 }

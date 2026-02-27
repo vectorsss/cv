@@ -1,10 +1,13 @@
-all: cv.pdf cv_cn.pdf
+all: cv.pdf cv_cn.pdf cv_ru.pdf
 
 cv.pdf: cv.tex
 	pdflatex cv.tex
 
 cv_cn.pdf: cv_cn.tex
 	xelatex cv_cn.tex
+
+cv_ru.pdf: cv_ru.tex
+	xelatex cv_ru.tex
 
 # Clean auxiliary files
 clean:
@@ -18,4 +21,6 @@ cv: cv.pdf
 
 cn: cv_cn.pdf
 
-.PHONY: all clean cleanall cv cn
+ru: cv_ru.pdf
+
+.PHONY: all clean cleanall cv cn ru

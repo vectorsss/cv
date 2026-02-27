@@ -16,23 +16,17 @@
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
-\usepackage[english]{babel}
+\usepackage[russian]{babel}
 \usepackage{tabularx}
 \usepackage[super]{nth}
 \usepackage{booktabs}
 \usepackage{accsupp}
 \usepackage{xifthen}
+\usepackage{fontspec}
 
 %----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
+% Use a standard font with Cyrillic support
+\setmainfont{Times New Roman}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -64,7 +58,7 @@
 
 % defines one's homepage
 % usage: \homepage{<homepage>}
-\newcommand{\homepage}[2][]{\faLink\ 
+\newcommand{\homepage}[2][]{\faLink\
   \ifthenelse{\isempty{#1}}%
     {\href{#2}{#2}}
     {\href{#2}{#1}}}
@@ -124,7 +118,7 @@
 \newenvironment{resumeItemSubList}{\begin{itemize}\setlength\itemsep{0.4em}}{\end{itemize}\vspace{-5pt}}
 
 \newcommand{\awardsTable}[1]{
-  \begin{tabularx}{\textwidth}{l @{\extracolsep{\fill}} *{4}{l}}
+	\begin{tabularx}{\textwidth}{l @{\extracolsep{\fill}} *{4}{l}}
 	\emph{Name}	& \emph{Placing}	& \emph{Scope}	& \emph{Awarder} & \emph{Year}       \\
 	\midrule\midrule
 	#1
@@ -135,8 +129,8 @@
 }
 
 \fancyfoot[L]{
-  \small \LaTeX\ Source: \link{https://github.com/vectorsss/cv}{github.com/vectorsss/cv} $|$ 
-  Web Version: \link{https://cv.zhaochi.ru}{cv.zhaochi.ru}
+  \small \LaTeX\ исходный код: \link{https://github.com/vectorsss/cv}{github.com/vectorsss/cv} $|$
+  Веб-версия: \link{https://cv.zhaochi.ru/ru}{cv.zhaochi.ru/ru}
 }
 
 \renewcommand\footrule{\hrule width\textwidth}
@@ -147,190 +141,160 @@
 \begin{document}
 \begin{center}
   \begin{flushright}
-    \footnotesize{\it Compiled on \today{}.}
+    \footnotesize{\it Дата компиляции: \today{}}
   \end{flushright}
 \end{center}
 \begin{center}
-  \textbf{\huge \scshape Chi Zhao (Vector)} \\ \vspace{1pt}
+  \textbf{\huge \scshape Чжао Чи (Vector)} \\ \vspace{1pt}
   \small \email{vector.zhaochi@gmail.com} $|$ \homepage[https://chizhao.gitlab.io]{https://chizhao.gitlab.io} $|$ \linkedin{https://www.linkedin.com/in/dandanv5} $|$ \github{https://github.com/vectorsss} $|$
   \researchgate{https://www.researchgate.net/profile/Chi-Zhao-4} $|$ \orcid{https://orcid.org/0000-0002-1166-7578}
 \end{center}
 
-\section{Education}
+\section{Образование}
 \begin{resumeSubHeadingList}
   \resumeSubheading
-    {Saint Petersburg State University}{Sept. 2021 -- Jun. 2025}
-    {PhD in Applied Mathematics and Control Processes}{Saint Petersburg, Russia}
+    {Санкт-Петербургский государственный университет}{сент. 2021 -- июнь 2025}
+    {Аспирантура, прикладная математика и процессы управления}{Санкт-Петербург, Россия}
     \resumeSubSubheading
-    {Thesis Title: ``Modeling of binary opinion dynamics in social networks of complex configurations''}{Defended in Apr. 2025}
+    {Тема диссертации: <<Моделирование динамики бинарных мнений в социальных сетях сложных конфигураций>>}{Защищена в апр. 2025}
 
   \resumeSubheading
-    {Saint Petersburg State University}{Sept. 2019 -- Jun. 2021}
-    {M.S. in Applied Mathematics and Informatics (GPA: 4.9/5.0)}{Saint Petersburg, Russia}
+    {Санкт-Петербургский государственный университет}{сент. 2019 -- июнь 2021}
+    {Магистратура, прикладная математика и информатика (средний балл: 4,9/5,0)}{Санкт-Петербург, Россия}
 
   \resumeSubheading
-    {Beijing Institute of Technology}{Jul. 3 -- 28, 2017}
-    {ACM Summer Camp}{Beijing, China}
+    {Пекинский технологический институт}{3 -- 28 июля 2017}
+    {Летняя школа ACM}{Пекин, Китай}
 
   \resumeSubheading
-    {Yanan University}{2015 -- 2019}
-    {B.S. in Computer Science (GPA: 3.1/4.0)}{Yanan, China}
+    {Яньаньский университет}{2015 -- 2019}
+    {Бакалавриат, информатика (средний балл: 3,1/4,0)}{Яньань, Китай}
 \end{resumeSubHeadingList}
 
-\section{Working Experience}
+\section{Опыт работы}
 \begin{resumeSubHeadingList}
   \resumeSubheading
-    {Saint Petersburg State University}{Dec. 2025 -- Present}
-    {Assistant professor}{Saint Petersburg, Russia}
+    {Санкт-Петербургский государственный университет}{дек. 2025 -- н.в.}
+    {Ассистент}{Санкт-Петербург, Россия}
   \resumeSubheading
-    {Huawei Inc.}{Sep. 2021 -- Dec. 2025}
-    {R\&D Engineer}{Saint Petersburg, Russia}
+    {Huawei Inc.}{сент. 2021 -- дек. 2025}
+    {Инженер-исследователь}{Санкт-Петербург, Россия}
   \resumeSubheading
-    {Wisedu Inc.}{Sep. 2016 -- May. 2019}
-    {Software Engineer}{Yanan, China}
-    % \resumeSubheading {Semi-decentralized of Blockchain Technology}{May 2019
-    % -- Aug. 2019} {Blockchain Developer}{Yanan, China} \begin{resumeItemList}
-    % \resumeItem{Implemented the core algorithm of the blockchain.}
-    % \resumeItem{Proposed theoretical improvements on the shortcomings of the
-    % current blockchain.} \resumeItem{Developed a material tracking system
-    % based on Semi-decentralized Blockchain.} \end{resumeItemList}
-
-    % \resumeSubheading {Fast calculation of massive high dimensional vector
-    % similarity}{May 2018 -- Aug. 2018} {Algorithm Engineer}{Yanan, China}
-    % \begin{resumeItemList} \resumeItem{Realized preprocessing of large data
-    % under small memory computer conditions.} \resumeItem{Implemented PCA
-    % dimensionality reduction algorithm.} \resumeItem{Developed Nearest
-    % Neighbor Algorithm using Ball-Tree.} \end{resumeItemList}
-
-    % \resumeSubheading {Online news classification system based on CNN}{Mar.
-    % 2018 -- May. 2018} {Full Stack Engineer}{Yanan, China}
-    % \begin{resumeItemList} \resumeItem{Developed a web crawler to get Netease
-    % News in real time and store it in a database.} \resumeItem{Implemented
-    % Chinese text classification algorithm using CNN.} \resumeItem{Developed
-    % the interaction between the front end and the back end of the project.}
-    % \end{resumeItemList}
+    {Wisedu Inc.}{сент. 2016 -- май 2019}
+    {Инженер-программист}{Яньань, Китай}
 
 \end{resumeSubHeadingList}
-\section{Project Experience}
+\section{Проектный опыт}
 \begin{resumeSubHeadingList}
   \resumeSubheading
-    {* Professional model data governance/Valuable training data selection}{2025}
-    {Project leader}{Saint Petersburg, Russia}
-    \resumeSubSubheading{Project focused on improving model performance through data governance and optimized feature/training data selection.}{}
-    \resumeSubSubheading{Sampled 60M representative records from 1.8B wireless data using custom diversity sampling algorithms.}{}
-    \resumeSubSubheading{Boosted model accuracy by 22\% using custom sampling and anomaly detection algorithms.}{}
-    \resumeSubSubheading{Accelerated training by 10\% via custom feature importance algorithms that removed 20\% redundant features.}{}
+    {* Управление данными моделей / Отбор ценных обучающих данных}{2025}
+    {Руководитель проекта}{Санкт-Петербург, Россия}
+    \resumeSubSubheading{Повышение точности моделей через управление данными и оптимизацию отбора признаков.}{}
+    \resumeSubSubheading{Выборка 60 млн записей из 1,8 млрд с помощью оригинальных алгоритмов.}{}
+    \resumeSubSubheading{Повышение точности модели на 22\% через алгоритмы выборки и обнаружения аномалий.}{}
+    \resumeSubSubheading{Ускорение обучения на 10\% за счёт удаления 20\% избыточных признаков.}{}
   \resumeSubheading
-    {* Internal columnar storage algorithm}{2023--2024}
-    {R\&D Engineer}{Saint Petersburg, Russia}
-    \resumeSubSubheading{High-performance, highly flexible columnar storage lossless compression algorithm}{}
-    \resumeSubSubheading{The algorithm will be commercialized to store base station data.}{}
-    \resumeSubSubheading{LTE (4G) data 30\% CR, NR (5G) data 40\% CR, without loss any performance.}{}
+    {* Внутренний алгоритм колоночного хранения}{2023--2024}
+    {Инженер-исследователь}{Санкт-Петербург, Россия}
+    \resumeSubSubheading{Высокопроизводительный, гибкий алгоритм сжатия без потерь для колоночного хранения}{}
+    \resumeSubSubheading{Алгоритм будет коммерциализирован для хранения данных базовых станций.}{}
+    \resumeSubSubheading{LTE (4G) --- 30\% сжатие, NR (5G) --- 40\% сжатие, без потери производительности.}{}
   \resumeSubheading
-    {Russian Science Foundation Grant \link{https://rscf.ru/en/project/22-21-00346/}{No. 22-21-00346}}{2023}
-    {Researcher}{Saint Petersburg, Russia}
-    \resumeSubSubheading{Completed simulation of two-layer opinion dynamics models, focusing on expressed and private opinions.}{}
+    {Грант Российского научного фонда \link{https://rscf.ru/en/project/22-21-00346/}{№ 22-21-00346}}{2023}
+    {Исследователь}{Санкт-Петербург, Россия}
+    \resumeSubSubheading{Моделирование двухслойных моделей динамики мнений: выражаемые и скрытые мнения.}{}
   \resumeSubheading
-    {* Elastic expansion algorithm for internal distributed file storage systems}{2023}
-    {R\&D Engineer}{Saint Petersburg, Russia}
-    \resumeSubSubheading{Enabled seamless HOFS multi-node expansion using HRW Hashing with minimal data movement and no performance loss.}{}
-    \resumeSubSubheading{Improved system reliability by ensuring data access continuity even after hash ring loss.}{}
+    {* Алгоритм эластичного расширения для распределённых файловых хранилищ}{2023}
+    {Инженер-исследователь}{Санкт-Петербург, Россия}
+    \resumeSubSubheading{Бесшовное расширение HOFS через HRW-хеширование с минимальным перемещением данных.}{}
+    \resumeSubSubheading{Повышена надёжность: непрерывный доступ к данным даже после потери хеш-кольца.}{}
   \resumeSubheading
-    {* Packet/Router data compression}{2023}
-    {R\&D Engineer}{Saint Petersburg, Russia}
-    \resumeSubSubheading{This project achieved 85\% CR without loss (Save 7x disk usage).}{}
+    {* Сжатие данных пакетов/маршрутизаторов}{2023}
+    {Инженер-исследователь}{Санкт-Петербург, Россия}
+    \resumeSubSubheading{Сжатие 85\% без потерь (экономия дискового пространства в 7 раз).}{}
   \resumeSubheading
-    {* Wireless data compression}{2021--2022}
-    {R\&D Engineer}{Saint Petersburg,Russia}
-    \resumeSubSubheading{This project achieved 96\% CR through lossy compression.}{}
+    {* Сжатие беспроводных данных}{2021--2022}
+    {Инженер-исследователь}{Санкт-Петербург, Россия}
+    \resumeSubSubheading{Достигнута степень сжатия 96\% с помощью сжатия с потерями.}{}
   \resumeSubheading
-    {* SparkSQL query optimization}{2021}
-    {R\&D Engineer}{Saint Petersburg, Russia}
-    \resumeSubSubheading{This project speeds up query execution by 50\% through predicate pushdown and optimization of data structures.}{}
-    % \resumeSubheading {Fast calculation of massive high dimensional vector
-    % similarity}{May 2018 -- Aug. 2018} {Algorithm Engineer}{Yanan, China}
-    % \resumeSubSubheading{This project improves the efficiency of the nearest
-    % neighbor algorithm and won the \nth{3} prize in the China Software Cup
-    % 2018.}{} \newpage \resumeSubheading {Online news classification system
-    % based on CNN}{Mar. 2018 -- May. 2018} {Full Stack Engineer}{Yanan, China}
-    % \resumeSubSubheading{This project has obtained a Chinese software
-    % registration certificate.}{} \resumeSubSubheading{This project won the
-    % \nth{3} prize in the Computer Design Competition 2018.}{}
+    {* Оптимизация запросов SparkSQL}{2021}
+    {Инженер-исследователь}{Санкт-Петербург, Россия}
+    \resumeSubSubheading{Ускорение запросов на 50\% через проталкивание предикатов и оптимизацию структур данных.}{}
 \end{resumeSubHeadingList}
 
 \newpage
 %-----------PROJECTS-----------
-\section{Patent / Copyright Certificates}
+\section{Патенты / Свидетельства о регистрации}
 \begin{resumeSubHeadingList}
   \resumeSubheading
-    {A program for modeling the opinion dynamics in two-layer networks}{2023}
-    {Russian Computer Software Copyright Registration Certificate}{{\link{https://new.fips.ru/registers-doc-view/fips_servlet?DB=EVM&DocNumber=2023661532&TypeFile=html}{NO. 2023661532}}}
+    {Программа для моделирования динамики распространения бинарных мнений в двухслойных сетях}{2023}
+    {Свидетельство о государственной регистрации программы для ЭВМ (Россия)}{{\link{https://new.fips.ru/registers-doc-view/fips_servlet?DB=EVM&DocNumber=2023661532&TypeFile=html}{№ 2023661532}}}
   \resumeSubheading
-    {Online News Classification System Based on Convolutional Neural Network}{2018}
-    {Chinese Computer Software Copyright Registration Certificate}{NO. 2831192}
+    {Система классификации онлайн-новостей на основе свёрточной нейронной сети}{2018}
+    {Свидетельство о регистрации программного обеспечения (Китай)}{№ 2831192}
 \end{resumeSubHeadingList}
 
-\section{Open Source Projects}
+\section{Проекты с открытым исходным кодом}
 \begin{resumeSubHeadingList}
 
   \resumeProjectHeading{
     \link{https://github.com/vectorsss/shapG}{\textbf{ShapG}} $|$
-    \emph{python $\cdot$ feature importance algorithm $\cdot$ centrality
-          measures}}{}
+    \emph{python $\cdot$ алгоритм важности признаков $\cdot$ меры
+          центральности}}{}
   \begin{resumeItemList}
-    \resumeItem{A Python package for feature importance algorithms based on
-                Shapley values.}
-    \resumeItem{This package can also be used to calculate the centrality in
-                the graph.}
+    \resumeItem{Python-пакет для алгоритмов важности признаков на основе
+                значений Шепли.}
+    \resumeItem{Пакет также может использоваться для вычисления центральности
+      в графах.}
   \end{resumeItemList}
   \resumeProjectHeading{
     \link{https://github.com/vectorsss/news_classification}{\textbf{News
         Classification}} $|$
-    \emph{python $\cdot$ NLP $\cdot$ CNN $\cdot$ text classification}}{}
+    \emph{python $\cdot$ NLP $\cdot$ CNN $\cdot$ классификация текстов}}{}
   \begin{resumeItemList}
-    \resumeItem{Online News Classification System Based on Convolutional Neural
-                Network.}
-    \resumeItem{This project was awarded the provincial \nth{3} prize in the
-                2018 national computer design competition.}
+    \resumeItem{Система классификации онлайн-новостей на основе свёрточной нейронной
+      сети.}
+    \resumeItem{Проект получил 3-е место на провинциальном этапе Всекитайского
+      конкурса компьютерного проектирования 2018 года.}
   \end{resumeItemList}
 \end{resumeSubHeadingList}
 
-\section{Skills}
+\section{Навыки}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
-        \textbf{Programming}{: Python $\cdot$ C/C++ $\cdot$ Go $\cdot$ Rust $\cdot$ Matlab/Octave $\cdot$ Julia $\cdot$ R $\cdot$ SQL $\cdot$ \LaTeX} \\
-        \textbf{ML Libraries}{: Tensorflow $\cdot$  PyTorch $\cdot$ Keras $\cdot$  Scikit-Learn} \\
-        \textbf{Developer Tools}{: Git $\cdot$ Docker $\cdot$  Google Cloud Platform} \\
-        \textbf{OS}{: Windows $\cdot$ MacOS $\cdot$ Arch Linux} \\
-        \textbf{Languages}{: Chinese (native), and English (professional working proficiency)}
+        \textbf{Языки программирования}{: Python $\cdot$ C/C++ $\cdot$ Go $\cdot$ Rust $\cdot$ Matlab/Octave $\cdot$ Julia $\cdot$ R $\cdot$ SQL $\cdot$ \LaTeX} \\
+        \textbf{Библиотеки МО}{: Tensorflow $\cdot$  PyTorch $\cdot$ Keras $\cdot$  Scikit-Learn} \\
+        \textbf{Инструменты разработки}{: Git $\cdot$ Docker $\cdot$  Google Cloud Platform} \\
+        \textbf{ОС}{: MacOS $\cdot$ Arch Linux $\cdot$ Windows} \\
+        \textbf{Языки}{: китайский (родной), английский (свободное владение), русский (свободное владение)}
         }}
 \end{itemize}
 
-\section{Research interests}
+\section{Научные интересы}
 \begin{resumeSubHeadingList}
   \resumeProjectHeading{
-    Graph Algorithms $\cdot$ Centrality Measures $\cdot$ Machine learning
-    $\cdot$ Explainable Artificial Intelligence $\cdot$ Probability Theory
-    $\cdot$ Statistics}{}
+    Алгоритмы на графах $\cdot$ Меры центральности $\cdot$ Машинное обучение
+    $\cdot$ Объяснимый ИИ $\cdot$ Теория вероятностей $\cdot$ Статистика}{}
   \resumeProjectHeading{
-    Data Compression $\cdot$ Coding Theory $\cdot$ Time Series Analysis $\cdot$
-    Optimization $\cdot$ Stochastic Modeling $\cdot$ Stochastic Processes}{}
+    Сжатие данных $\cdot$ Теория кодирования $\cdot$ Анализ временных рядов $\cdot$
+    Оптимизация $\cdot$ Стохастическое моделирование $\cdot$ Случайные процессы}{}
 \end{resumeSubHeadingList}
-\section{Teaching}
+\section{Преподавание}
 \begin{resumeSubHeadingList}
   \resumeSubheading{Optimization, Forecasting and Artificial Intelligence in
-                    Industry}{Saint-Petersburg, Russia}{Lecturer}{2026}
-  \resumeSubheading{Deep learning}{Saint-Petersburg, Russia}{Lecturer}{2026}
-  \resumeSubheading{Advance Economics}{Saint-Petersburg,
-                    Russia}{Lecturer}{2025}
-  \resumeSubheading{Applied Statistics in R}{Saint-Petersburg, Russia}{Teaching
-                    assistant}{2024}
-  \resumeSubheading{Statistical Decisions and Econometrics}{Saint-Petersburg,
-                    Russia}{Teaching assistant}{2022}
+                    Industry}{Санкт-Петербург, Россия}{Преподаватель}{2026}
+  \resumeSubheading{Deep learning}{Санкт-Петербург,
+                    Россия}{Преподаватель}{2026}
+  \resumeSubheading{Advance Economics}{Санкт-Петербург,
+                    Россия}{Преподаватель}{2025}
+  \resumeSubheading{Applied Statistics in R}{Санкт-Петербург, Россия}{Ассистент
+                    преподавателя}{2024}
+  \resumeSubheading{Statistical Decisions and Econometrics}{Санкт-Петербург,
+                    Россия}{Ассистент преподавателя}{2022}
 \end{resumeSubHeadingList}
-\section{Community service}
+\section{Научная деятельность}
 \begin{resumeSubHeadingList}
-  \resumeProjectHeading{{\bf Reviewer for journals and conferences}}{}
+  \resumeProjectHeading{{\bf Рецензент журналов и конференций}}{}
   \begin{resumeItemList}
     \resumeItem{Engineering Applications of Artificial Intelligence (EAAI)}
     \resumeItem{Group Decision and Negotiation (GDN)}
@@ -339,7 +303,7 @@
     \resumeItem{International Conference On Computational Optimization (ICOMP)}
   \end{resumeItemList}
 \end{resumeSubHeadingList}
-\section{Selected Publications}
+\section{Избранные публикации}
 \begin{enumerate}
   \fontsize{10}{10.5}\selectfont
   \item \textbf{Zhao C.}, Liu J., Parilina E. M. Strategic inputs: feature selection from game-theoretic perspective. // {\it arXiv preprint arXiv:2510.24982.} -- 2025.
@@ -354,7 +318,7 @@
   \item \textbf{Zhao C.}, Parilina E. M. Consensus time and winning rate based on simulations in two-layer networks with hypocrisy // {\it 2023 7th Scientific School Dynamics of Complex Networks and their Applications (DCNA).} -- 2023. -- P. 68-71.
 \end{enumerate}
 
-\section{Conferences}
+\section{Конференции}
 \begin{resumeSubHeadingList}
   \resumeSubheading{International Conference On Computational Optimization
                     (ICOMP 2025)}{Abu Dhabi, UAE}{Poster Presentation}{Oct. 17
@@ -389,7 +353,7 @@
     % China}{Visitor}{July 23, 2017}
 \end{resumeSubHeadingList}
 
-\section{Honours \& Awards}
+\section{Награды и достижения}
 \setlength{\tabcolsep}{6.0pt}
 \renewcommand{\arraystretch}{1.1}
 \fontsize{8.5}{11}\selectfont
@@ -424,4 +388,3 @@
                   Mathematical Society}{Nov. 2016} \\ \hline }
 
 \end{document}
-
