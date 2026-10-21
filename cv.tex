@@ -46,7 +46,8 @@
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\textheight}{0.85in}
+\setlength{\footskip}{14pt}
 
 \urlstyle{same}
 % defines one's email
@@ -177,7 +178,7 @@
     {B.S. in Computer Science (GPA: 3.1/4.0)}{Yanan, China}
 \end{resumeSubHeadingList}
 
-\section{Working Experience}
+\section{Professional Experience}
 \begin{resumeSubHeadingList}
   \resumeSubheading
     {Saint Petersburg State University}{Dec. 2025 -- Present}
@@ -188,33 +189,12 @@
   \resumeSubheading
     {Wisedu Inc.}{Sep. 2016 -- May. 2019}
     {Software Engineer}{Yanan, China}
-    % \resumeSubheading {Semi-decentralized of Blockchain Technology}{May 2019
-    % -- Aug. 2019} {Blockchain Developer}{Yanan, China} \begin{resumeItemList}
-    % \resumeItem{Implemented the core algorithm of the blockchain.}
-    % \resumeItem{Proposed theoretical improvements on the shortcomings of the
-    % current blockchain.} \resumeItem{Developed a material tracking system
-    % based on Semi-decentralized Blockchain.} \end{resumeItemList}
-
-    % \resumeSubheading {Fast calculation of massive high dimensional vector
-    % similarity}{May 2018 -- Aug. 2018} {Algorithm Engineer}{Yanan, China}
-    % \begin{resumeItemList} \resumeItem{Realized preprocessing of large data
-    % under small memory computer conditions.} \resumeItem{Implemented PCA
-    % dimensionality reduction algorithm.} \resumeItem{Developed Nearest
-    % Neighbor Algorithm using Ball-Tree.} \end{resumeItemList}
-
-    % \resumeSubheading {Online news classification system based on CNN}{Mar.
-    % 2018 -- May. 2018} {Full Stack Engineer}{Yanan, China}
-    % \begin{resumeItemList} \resumeItem{Developed a web crawler to get Netease
-    % News in real time and store it in a database.} \resumeItem{Implemented
-    % Chinese text classification algorithm using CNN.} \resumeItem{Developed
-    % the interaction between the front end and the back end of the project.}
-    % \end{resumeItemList}
-
 \end{resumeSubHeadingList}
-\section{Project Experience}
+
+\section{Research Projects}
 \begin{resumeSubHeadingList}
   \resumeSubheading
-    {Russian Science Foundation Grant \link{https://rscf.ru/project/26-71-100019/}{No. 26-71-100019}}{2026--2027}
+    {Russian Science Foundation Grant \link{https://rscf.ru/project/26-71-10019/}{No. 26-71-10019}}{2026--2027}
     {Senior Researcher}{Saint Petersburg, Russia}
     \begin{resumeItemList}
       \resumeItem{Hybrid computational methods and neural network surrogates
@@ -222,52 +202,46 @@
                   1).}
     \end{resumeItemList}
   \resumeSubheading
-    {* Professional model data governance/Valuable training data selection}{2025}
-    {Project leader}{Saint Petersburg, Russia}
-    \resumeSubSubheading{Project focused on improving model performance through data governance and optimized feature/training data selection.}{}
-    \resumeSubSubheading{Sampled 60M representative records from 1.8B wireless data using custom diversity sampling algorithms.}{}
-    \resumeSubSubheading{Boosted model accuracy by 22\% using custom sampling and anomaly detection algorithms.}{}
-    \resumeSubSubheading{Accelerated training by 10\% via custom feature importance algorithms that removed 20\% redundant features.}{}
-  \resumeSubheading
-    {* Internal columnar storage algorithm}{2023--2024}
-    {R\&D Engineer}{Saint Petersburg, Russia}
-    \resumeSubSubheading{High-performance, highly flexible columnar storage lossless compression algorithm}{}
-    \resumeSubSubheading{The algorithm will be commercialized to store base station data.}{}
-    \resumeSubSubheading{LTE (4G) data 30\% CR, NR (5G) data 40\% CR, without loss any performance.}{}
-  \resumeSubheading
     {Russian Science Foundation Grant \link{https://rscf.ru/en/project/22-21-00346/}{No. 22-21-00346}}{2023}
     {Researcher}{Saint Petersburg, Russia}
-    \resumeSubSubheading{Completed simulation of two-layer opinion dynamics models, focusing on expressed and private opinions.}{}
-  \resumeSubheading
-    {* Elastic expansion algorithm for internal distributed file storage systems}{2023}
-    {R\&D Engineer}{Saint Petersburg, Russia}
-    \resumeSubSubheading{Enabled seamless HOFS multi-node expansion using HRW Hashing with minimal data movement and no performance loss.}{}
-    \resumeSubSubheading{Improved system reliability by ensuring data access continuity even after hash ring loss.}{}
-  \resumeSubheading
-    {* Packet/Router data compression}{2023}
-    {R\&D Engineer}{Saint Petersburg, Russia}
-    \resumeSubSubheading{This project achieved 85\% CR without loss (Save 7x disk usage).}{}
-    \newpage
-  \resumeSubheading
-    {* Wireless data compression}{2021--2022}
-    {R\&D Engineer}{Saint Petersburg,Russia}
-    \resumeSubSubheading{This project achieved 96\% CR through lossy compression.}{}
-  \resumeSubheading
-    {* SparkSQL query optimization}{2021}
-    {R\&D Engineer}{Saint Petersburg, Russia}
-    \resumeSubSubheading{This project speeds up query execution by 50\% through predicate pushdown and optimization of data structures.}{}
-    % \resumeSubheading {Fast calculation of massive high dimensional vector
-    % similarity}{May 2018 -- Aug. 2018} {Algorithm Engineer}{Yanan, China}
-    % \resumeSubSubheading{This project improves the efficiency of the nearest
-    % neighbor algorithm and won the \nth{3} prize in the China Software Cup
-    % 2018.}{} \newpage \resumeSubheading {Online news classification system
-    % based on CNN}{Mar. 2018 -- May. 2018} {Full Stack Engineer}{Yanan, China}
-    % \resumeSubSubheading{This project has obtained a Chinese software
-    % registration certificate.}{} \resumeSubSubheading{This project won the
-    % \nth{3} prize in the Computer Design Competition 2018.}{}
+    \begin{resumeItemList}
+      \resumeItem{Simulated two-layer opinion dynamics models with expressed
+                  and private opinions.}
+    \end{resumeItemList}
 \end{resumeSubHeadingList}
 
-%-----------PROJECTS-----------
+\section{Industrial Projects}
+\begin{resumeSubHeadingList}
+  \resumeProjectHeading{
+    \textbf{Data Governance and Feature Selection} $|$ \emph{Huawei, Project Lead}}{2025}
+  \begin{resumeItemList}
+    \resumeItem{Selected 60M representative records from 1.8B wireless records
+                using diversity sampling; improved model accuracy by 22\%
+                through sampling and anomaly detection.}
+    \resumeItem{Removed 20\% of redundant features using custom feature
+                importance algorithms, accelerating training by 10\%.}
+  \end{resumeItemList}
+  \resumeProjectHeading{
+    \textbf{Columnar Storage and Data Compression} $|$ \emph{Huawei}}{2021--2024}
+  \begin{resumeItemList}
+    \resumeItem{Developed lossless columnar compression for LTE/NR base-station
+                data without degrading performance (2023--2024).}
+    \resumeItem{Reduced packet/router data storage by 85\% through lossless
+                compression (2023).}
+    \resumeItem{Achieved a 96\% compression rate for wireless data using lossy
+                compression (2021--2022).}
+  \end{resumeItemList}
+  \resumeProjectHeading{
+    \textbf{Distributed Storage and Query Optimization} $|$ \emph{Huawei}}{2021--2023}
+  \begin{resumeItemList}
+    \resumeItem{Enabled seamless HOFS expansion using HRW hashing with minimal
+                data movement; maintained data access after hash ring loss
+                (2023).}
+    \resumeItem{Accelerated SparkSQL queries by 50\% through predicate pushdown
+                and data-structure optimization (2021).}
+  \end{resumeItemList}
+\end{resumeSubHeadingList}
+
 \section{Patent / Copyright Certificates}
 \begin{resumeSubHeadingList}
   \resumeSubheading
@@ -351,7 +325,7 @@
   \end{resumeItemList}
 \end{resumeSubHeadingList}
 \section{Selected Publications}
-\begin{enumerate}
+\begin{enumerate}[itemsep=2pt,parsep=0pt]
   \fontsize{10}{10.5}\selectfont
   \item Zhang Y., \textbf{Zhao C.}, Zhao S., Xu Z., Huang F., Petrov Yu. V.
         \href{https://doi.org/10.1016/j.ijplas.2026.104835}{Physics-verified
@@ -411,7 +385,6 @@
     % Summit 2017}{Beijing, China}{Visitor}{July 23, 2017}
 \end{resumeSubHeadingList}
 
-\newpage
 \section{Honours \& Awards}
 \setlength{\tabcolsep}{6.0pt}
 \renewcommand{\arraystretch}{1.1}

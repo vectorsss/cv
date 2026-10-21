@@ -46,7 +46,8 @@
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\textheight}{0.85in}
+\setlength{\footskip}{14pt}
 
 \urlstyle{same}
 % defines one's email
@@ -190,58 +191,45 @@
     {软件工程师}{中国，延安}
 
 \end{resumeSubHeadingList}
-\section{项目经历}
+\section{科研项目}
 \begin{resumeSubHeadingList}
   \resumeSubheading
-    {俄罗斯科学基金会资助项目 \link{https://rscf.ru/project/26-71-100019/}{编号：26-71-100019}}{2026--2027}
+    {俄罗斯科学基金会资助项目 \link{https://rscf.ru/project/26-71-10019/}{编号：26-71-10019}}{2026--2027}
     {高级研究员}{俄罗斯，圣彼得堡}
     \begin{resumeItemList}
       \resumeItem{高速冲击下塑性理论问题的混合计算方法与神经网络代理模型（第一阶段）。}
     \end{resumeItemList}
   \resumeSubheading
-    {*专业模型数据治理/高价值训练数据选择}{2025年}
-    {项目负责人}{俄罗斯，圣彼得堡}
-    \resumeSubSubheading{该项目专注于通过数据治理和有价值的特征/训练数据选择来提高模型精度。}{}
-    \resumeSubSubheading{通过自研多样性采样算法从18亿条无线网络数据(4G和5G)中抽取了6000万条最具代表性的数据。}{}
-    \resumeSubSubheading{通过自研采样和异常检测算法将模型精度提高了22\%。}{}
-    \resumeSubSubheading{通过自研特征重要性算法去除了20\%的冗余特征，使训练速度提升10\%。}{}
-  \resumeSubheading
-    {*内部列存储算法}{2023--2024年}
-    {研发工程师}{俄罗斯，圣彼得堡}
-    \resumeSubSubheading{高性能、高度灵活的列存储无损压缩算法}{}
-    \resumeSubSubheading{该算法将被商业化用于存储基站数据。}{}
-    \resumeSubSubheading{LTE (4G) 数据 30\% 压缩率，NR (5G) 数据 40\% 压缩率，无任何性能损失。}{}
-  \resumeSubheading
     {俄罗斯科学基金会资助项目 \link{https://rscf.ru/en/project/22-21-00346/}{编号：22-21-00346}}{2023年}
     {研究员}{俄罗斯，圣彼得堡}
-    \resumeSubSubheading{完成了双层意见动态模型仿真，聚焦于公开意见和私密意见(EPO观点动态模型)。}{}
-  \resumeSubheading
-    {*内部分布式文件存储系统弹性扩展算法}{2023年}
-    {研发工程师}{俄罗斯，圣彼得堡}
-    \resumeSubSubheading{使用HRW哈希实现HOFS多节点无缝扩展，最小化数据移动且无性能损失。}{}
-    \resumeSubSubheading{可靠性显著提升：彻底解决``因哈希环丢失而无法重新生成导致群集数据全部丢失''场景下数据访问的可靠性问题}{}
-  \resumeSubheading
-    {*数据包/路由数据压缩}{2023年}
-    {研发工程师}{俄罗斯，圣彼得堡}
-    \resumeSubSubheading{该项目通过无损压缩达到85\% 压缩率（节省7倍磁盘使用量）。}{}
-    \newpage
-  \resumeSubheading
-    {*无线数据压缩}{2021--2022年}
-    {研发工程师}{俄罗斯，圣彼得堡}
-    \resumeSubSubheading{该项目通过有损压缩达到96\% 压缩率。}{}
-  \resumeSubheading
-    {* SparkSQL查询优化}{2021年}
-    {研发工程师}{俄罗斯，圣彼得堡}
-    \resumeSubSubheading{该项目通过谓词下推和数据结构优化将查询执行速度提升50\%。}{}
-    % \resumeSubheading {大规模高维向量相似度快速计算}{2018年5月 -- 2018年8月} {算法工程师}{中国，延安}
-    % \resumeSubSubheading{该项目提高了最近邻算法的效率，并获得了2018年中国软件杯三等奖。}{}
-
-    % \resumeSubheading {基于CNN的在线新闻分类系统}{2018年3月 -- 2018年5月} {全栈工程师}{中国，延安}
-    % \resumeSubSubheading{该项目获得了中国软件著作权登记证书。}{}
-    % \resumeSubSubheading{该项目获得了2018年计算机设计大赛三等奖。}{}
+    \begin{resumeItemList}
+      \resumeItem{开展双层意见动力学模型仿真，研究公开意见与私密意见。}
+    \end{resumeItemList}
 \end{resumeSubHeadingList}
 
-%-----------PROJECTS-----------
+\section{工业项目}
+\begin{resumeSubHeadingList}
+  \resumeProjectHeading{
+    \textbf{数据治理与特征选择} $|$ \emph{华为，项目负责人}}{2025年}
+  \begin{resumeItemList}
+    \resumeItem{通过多样性采样从18亿条无线网络数据中筛选6000万条代表性样本；结合采样与异常检测，将模型精度提高22\%。}
+    \resumeItem{通过自研特征重要性算法去除20\%的冗余特征，使训练速度提升10\%。}
+  \end{resumeItemList}
+  \resumeProjectHeading{
+    \textbf{列式存储与数据压缩} $|$ \emph{华为}}{2021--2024年}
+  \begin{resumeItemList}
+    \resumeItem{开发面向LTE/NR基站数据的列式无损压缩算法，保持原有性能（2023--2024年）。}
+    \resumeItem{通过无损压缩将数据包/路由数据的存储空间减少85\%（2023年）。}
+    \resumeItem{通过有损压缩实现无线数据96\%的压缩率（2021--2022年）。}
+  \end{resumeItemList}
+  \resumeProjectHeading{
+    \textbf{分布式存储与查询优化} $|$ \emph{华为}}{2021--2023年}
+  \begin{resumeItemList}
+    \resumeItem{使用HRW哈希实现HOFS无缝扩容，减少数据迁移，并在哈希环丢失后保持数据可访问（2023年）。}
+    \resumeItem{通过谓词下推与数据结构优化，将SparkSQL查询执行速度提升50\%（2021年）。}
+  \end{resumeItemList}
+\end{resumeSubHeadingList}
+
 \section{专利/著作权证书}
 \begin{resumeSubHeadingList}
   \resumeSubheading
@@ -320,7 +308,7 @@
   \end{resumeItemList}
 \end{resumeSubHeadingList}
 \section{精选论文}
-\begin{enumerate}
+\begin{enumerate}[itemsep=2pt,parsep=0pt]
   \fontsize{10}{10.5}\selectfont
   \item Zhang Y., \textbf{Zhao C.}, Zhao S., Xu Z., Huang F., Petrov Yu. V.
         \href{https://doi.org/10.1016/j.ijplas.2026.104835}{Physics-verified
@@ -335,6 +323,7 @@
   \item \textbf{Zhao C.}, Liu J., Parilina E. M. The Shapley Value Contribution to Explainable Artificial Intelligence: A Comprehensive Survey // {\it Dynamic Games and Applications.} -- 2025. -- Oct. -- P. 1-38. {\bf (Q2, IF (2025): 1.3)}
   \item \textbf{Zhao C.}, Liu J., Parilina E. M. Complete-to-Sparse: A Novel Graph Construction Strategy for Efficient ShapG // {\it Mathematical Optimization Theory and Operations Research}. -- Cham : Springer Nature Switzerland. -- 2025. -- P. 180–194.
   \item \textbf{Zhao C.}, Liu J., Parilina E. M. ShapG: new feature importance method based on the Shapley value // {\it Engineering Applications of Artificial Intelligence.} -- 2025. -- May. -- Vol. 148, 110409. {\bf (Q1, IF: 8.0)}
+        \newpage
   \item \textbf{Zhao C.}, Parilina E. M. Centrality measures and opinion dynamics in two-layer networks with replica nodes // {\it Computers and Operations Research.} -- 2026. -- Jan. -- Vol. 185, 107245. {\bf (Q1, IF: 4.3)}
   \item \textbf{Zhao C.}, Parilina E. M. Analysis of consensus time and winning rate in two-layer networks with hypocrisy of different structures // {\it Vestnik of Saint Petersburg University. Applied Mathematics. Computer Science. Control Processes.} -- 2024. -- Vol. 20, no. 2. -- P. 170-192.
   \item \textbf{Zhao C.}, Parilina E. M. Opinion Dynamics in Two-Layer Networks with Hypocrisy // {\it Journal of the Operations Research Society of China}. -- 2024. -- Mar. -- Vol. 12, no. 1. -- P. 109-132. {\bf (Q2, IF (2025): 1.0)}
@@ -380,7 +369,6 @@
     % Summit 2017}{Beijing, China}{Visitor}{July 23, 2017}
 \end{resumeSubHeadingList}
 
-\newpage
 \section{荣誉与奖项}
 \setlength{\tabcolsep}{6.0pt}
 \renewcommand{\arraystretch}{1.1}
